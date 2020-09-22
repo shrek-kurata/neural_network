@@ -43,7 +43,7 @@ export class NeuralNetwork {
 	/**
 	 *
 	 * @param pattern
-	 * 行列の積の計算でできるが、n行n列の正方行列とn行1列の積なので、返り値は1行n列の正方行列のなる
+	 * 行列の積の計算でできるが、n行n列の正方行列とn行1列の積なので、返り値は1行n列の正方行列
 	 */
 	hasRecalled(pattern: NeuralActivityPattern) {
 		let _hasRecalled = false;
