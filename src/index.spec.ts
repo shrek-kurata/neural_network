@@ -1,28 +1,28 @@
-import { NeuralNetwork } from ".";
+import { SynapseMatrix } from ".";
 import { NeuralActivityPattern } from "./neural_activity.model";
 
 describe("NeuralNetwork", () => {
 	it("init", () => {
-		const network = new NeuralNetwork(3);
+		const synapse_matrix = new SynapseMatrix(3);
 
-		console.log(network._network);
+		console.log(synapse_matrix._synapse_matrix);
 
-		console.log(network);
+		console.log(synapse_matrix);
 	});
 });
 
-describe("NeuralNetwork", () => {
+describe("SynapseMatrix", () => {
 	it("input", () => {
 		const patternA: NeuralActivityPattern = [1, 1, -1];
 
-		const network = new NeuralNetwork(3);
-		network.input(patternA);
-		network.input(patternA);
-		network.input(patternA);
+		const synapse_matrix = new SynapseMatrix(3);
+		synapse_matrix.input(patternA);
+		synapse_matrix.input(patternA);
+		synapse_matrix.input(patternA);
 
-		console.log(network._network);
+		console.log(synapse_matrix._synapse_matrix);
 
-		const hasRecalled = network.hasRecalled(patternA);
+		const hasRecalled = synapse_matrix.hasRecalled(patternA);
 
 		if (hasRecalled) {
 			console.log("Memory Recalled!!");
